@@ -68,10 +68,10 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-6 bg-gradient-light min-h-screen">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-foreground">Dashboard Overview</h1>
-        <Badge variant="secondary" className="text-sm">
+        <h1 className="text-3xl font-bold text-primary">Dashboard Overview</h1>
+        <Badge variant="secondary" className="text-sm bg-white/80 text-primary border-primary/20">
           Last updated: {new Date().toLocaleDateString()}
         </Badge>
       </div>
@@ -79,17 +79,17 @@ const Dashboard = () => {
       {/* Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {metrics.map((metric, index) => (
-          <Card key={index} className="shadow-card hover:shadow-hover transition-shadow">
+          <Card key={index} className="shadow-light hover:shadow-card transition-all duration-300 bg-white/70 backdrop-blur-sm border-white/50">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
+              <CardTitle className="text-sm font-medium text-primary/70">
                 {metric.title}
               </CardTitle>
-              <div className={`p-2 rounded-md ${metric.gradient}`}>
-                <metric.icon className="h-4 w-4 text-white" />
+              <div className={`p-3 rounded-lg ${metric.gradient} shadow-light`}>
+                <metric.icon className="h-5 w-5 text-white" />
               </div>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-foreground">{metric.value}</div>
+              <div className="text-2xl font-bold text-primary">{metric.value}</div>
               <div className={`text-xs flex items-center mt-1 ${
                 metric.changeType === 'positive' ? 'text-success' : 'text-destructive'
               }`}>
@@ -105,9 +105,9 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
         {/* Recent Orders */}
-        <Card className="shadow-card">
+        <Card className="shadow-light bg-white/70 backdrop-blur-sm border-white/50">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+            <CardTitle className="flex items-center gap-2 text-primary">
               <ShoppingCart className="h-5 w-5" />
               Recent Orders
             </CardTitle>
@@ -133,7 +133,7 @@ const Dashboard = () => {
         </Card>
 
         {/* Low Stock Alert */}
-        <Card className="shadow-card">
+        <Card className="shadow-light bg-white/70 backdrop-blur-sm border-white/50">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-warning">
               <Package className="h-5 w-5" />

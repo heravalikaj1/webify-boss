@@ -143,9 +143,9 @@ const Messages = () => {
   const unreadCount = messages.filter(m => m.status === 'unread').length
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-6 bg-gradient-light min-h-screen">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-foreground">Contact Messages</h1>
+        <h1 className="text-3xl font-bold text-primary">Contact Messages</h1>
         <div className="flex gap-2">
           <Badge variant="secondary" className="text-sm">
             Total Messages: {messages.length}

@@ -75,10 +75,12 @@ export default {
         "gradient-success": "var(--gradient-success)",
         "gradient-warning": "var(--gradient-warning)",
         "gradient-card": "var(--gradient-card)",
+        "gradient-light": "var(--gradient-light)",
       },
       boxShadow: {
         "card": "var(--shadow-card)",
         "hover": "var(--shadow-hover)",
+        "light": "var(--shadow-light)",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -108,9 +108,9 @@ const Orders = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-6 bg-gradient-light min-h-screen">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-foreground">Order Management</h1>
+        <h1 className="text-3xl font-bold text-primary">Order Management</h1>
         <div className="flex gap-2">
           <Badge variant="secondary" className="text-sm">
             Total Orders: {orders.length}

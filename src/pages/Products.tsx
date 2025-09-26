@@ -118,9 +118,9 @@ const Products = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 p-6 bg-gradient-light min-h-screen">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-foreground">Product Management</h1>
+        <h1 className="text-3xl font-bold text-primary">Product Management</h1>
         <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
           <DialogTrigger asChild>
             <Button className="bg-gradient-primary hover:opacity-90">

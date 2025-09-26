@@ -38,12 +38,12 @@ export function AdminSidebar() {
       : "hover:bg-accent hover:text-accent-foreground"
 
   return (
-    <Sidebar className={isCollapsed ? "w-14" : "w-64"} collapsible="icon">
-      <div className="flex items-center justify-between p-4 border-b">
+    <Sidebar className={`${isCollapsed ? "w-14" : "w-64"} bg-gradient-light border-r`} collapsible="icon">
+      <div className="flex items-center justify-between p-4 border-b border-border/50 bg-white/50">
         {!isCollapsed && (
-          <h2 className="text-lg font-semibold text-foreground">Admin Panel</h2>
+          <h2 className="text-lg font-semibold text-primary">Admin Dashboard</h2>
         )}
-        <SidebarTrigger className="h-8 w-8" />
+        <SidebarTrigger className="h-8 w-8 text-primary hover:bg-primary/10" />
       </div>
       
       <SidebarContent>
